@@ -138,7 +138,7 @@ defmodule KajoolyTemplateTailwindWeb.GenericLive.Dropdown do
     assigns[:classdrop] || "absolute right-0 top-15 flex flex-col w-60 mt-3 border rounded-lg  shadow-lg border-gray-100  dark:border-gray-700
     bg-white
     dark:border-gray-800
-    dark:bg-gray-900
+    dark:bg-gray-200
     z-50"
   end
   def dropdown_default_class_classdrop_button(assigns) do
