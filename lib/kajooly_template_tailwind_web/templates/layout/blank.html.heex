@@ -8,6 +8,10 @@
     <%= render "patrials/_head_meta.html", conn: @conn, assigns: assigns  %>
     <%= live_title_tag assigns[:page_title] || assigns[:head][:title] || "KajoolyTemplateTailwind", suffix: assigns[:head][:suffix] || " · Phoenix Framework" %>
     <%= render "patrials/_head_css_scripts.html", conn: @conn, assigns: assigns  %>
+    <%= render "patrials/_head_css_scripts.html", conn: @conn, assigns: assigns  %>
+    <%= if assigns.conn.assigns[:head][:meta_raw] != nil do %>
+      <%= raw assigns.conn.assigns[:head][:meta_raw] %>
+    <% end %>
   </head>
   <body>
     <div 
@@ -19,6 +23,8 @@
         </main>
     </div>
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-
+    <%= if assigns.conn.assigns.head[:js_raw] != nil do %>
+      <%= raw assigns.conn.assigns.head[:js_raw] %>
+    <% end %>
   </body>
 </html>
